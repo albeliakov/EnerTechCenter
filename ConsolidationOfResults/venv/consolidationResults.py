@@ -40,7 +40,7 @@ def write2Excel(book, sheetName, cols, colNames, writeRows):
             row.write(index, value)
 
     # Save the result
-    book.save("Выходные_данные.xls")
+    book.save("C:/EnerTechCenter/Результаты/объедин_КашиноПтицеплемзавод.xls")
 
 # полученные результаты по сети 1
 gridResults_1 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Кашино.xlsx',
