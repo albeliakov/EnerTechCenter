@@ -4,8 +4,21 @@
     <list default="true" id="e5af8fc8-18b6-45eb-9ca5-d9dc23020570" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/consolidationResults.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/consolidationResults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Выходные_данные.xls" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Выходные_данные.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Выходные_данные.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calc/.idea/calc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../calc/.idea/calc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../calc/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../calc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../calc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calc/calk.py" beforeDir="false" afterPath="$PROJECT_DIR$/../calc/calk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calc/outData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../calc/outData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/cellsInd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/cellsInd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/dataTP.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/dataTP.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/dependMatr.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/dependMatr.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/graphDict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/graphDict.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/matrNeigh.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Кашино/matrNeigh.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Птицеплензавод/dependMatr.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Птицеплензавод/dependMatr.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ДанныеПоСетям/Птицеплензавод/matrNeigh.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ДанныеПоСетям/Птицеплензавод/matrNeigh.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Результаты/выхДанные_Кашино.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Результаты/выхДанные_Кашино.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Результаты/объедин_КашиноПтицеплемзавод.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../Результаты/объедин_КашиноПтицеплемзавод.xls" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/consolidationResults.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="42" column="76" lean-forward="true" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+            <state relative-caret-position="259">
+              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
                 <element signature="e#270#914#0" />
@@ -69,7 +82,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,6 +98,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,7 +174,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.48404256" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -178,8 +191,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/consolidationResults.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="42" column="76" lean-forward="true" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+        <state relative-caret-position="259">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
             <element signature="e#270#914#0" />

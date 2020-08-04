@@ -1,6 +1,9 @@
 import math
 import time
 from openpyxl import load_workbook
+from writeMatr import writeListInXlsx
+# import xlwt
+# import pandas as pd
 
 
 # Загрузка матрицы сопряженности линий из excel-файла
@@ -199,6 +202,7 @@ def calculationFrom1ToNka(amountKAStart=1, amountKAFinish=AMOUNT_LINES-1):
 
         # ЦИКЛ ФОРМИРОВАНИЯ КОМБИНАЦИЙ И ИХ ПРОСЧЕТА
         while True:
+            # print(positions)
             numbComb += 1
             if numbComb%100000000==0: print('Кол-во просчитанных комбинаций: ', numbComb)
             lastPosit = positions[-1] # последняя в списке позиция
@@ -271,6 +275,105 @@ def calculationFrom1ToNka(amountKAStart=1, amountKAFinish=AMOUNT_LINES-1):
     print('\nКонец рассчетов:', time.ctime())
 
     return returnCalculData[1:]
+
+
+dictCurrentPos = {'к8'  : [8, 131],  'к20' : [20, 100], 'к21' : [21, 95], 'к35' : [35, 83],
+                  'к36' : [36, 82],  'к37' : [37, 84],  'к46' : [46, 92], 'к58' : [58, 104],
+                  'к66' : [70, 124], 'к67' : [71, 123], 'п6'  : [144, 6], 'п8'  : [142, 8], 
+                  'п15' : [139, 15], 'п37' : [91, 37],  'п42' : [79, 42], 'п43' : [86, 43],
+                  'шр'  : [65, 62]}
+
+posList = [['к67', 'к66', 'к46', 'к37', 'к36', 'к21', 'к20', 'к8' , 'п43', 'п42', 'п37', 'п15', 'п8', 'п6'],
+           ['к67', 'к66', 'к46', 'к37', 'к36', 'к21', 'к20', 'к8' , 'п43', 'п42', 'п37', 'п15', 'п6'],
+           ['к67', 'к66', 'к37', 'к36', 'к21', 'к20', 'к8' , 'п43', 'п42', 'п37', 'п15', 'п6'],
+           ['к67', 'к66', 'к37', 'к36', 'к20', 'к8' , 'п43', 'п42', 'п37', 'п15', 'п6'],
+           ['к67', 'к66', 'к37', 'к36', 'к20', 'п43', 'п42', 'п37', 'п15', 'п6'],
+           ['к67', 'к66', 'к37', 'к36', 'к20', 'п43', 'п37', 'п15', 'п6'],
+           ['к67', 'к37', 'к36', 'к20', 'п43', 'п37', 'п15', 'п6'],
+           ['к58', 'к36', 'к20', 'п43', 'п37', 'п15', 'п6'],
+           ['к58', 'к36', 'к20', 'п37', 'п15', 'п6'],
+           ['к58', 'к36', 'п37', 'п15', 'п6'],
+           ['к58', 'к36', 'п15', 'п6'],
+           ['к58', 'п15', 'п6'],
+           ['к58', 'п15'],
+           ['к58'],
+           []]
+
+# сделать листы с соответсвующими номерами, добавив в каждый 'шр' и сортировка по убыванию
+# Кашино_ППЗ - 0
+# ППЗ_Кашино - 1
+#curTrend = 0
+print('Тренд не забудь!!!!!')
+curTrend = int(input('(0-Кашино_ППЗ, 1-ППЗ_Кашино) trend = '))
+def decodPosit(lstPos, dictPos, trend):
+    newPosList = []
+    for posComb in lstPos:
+        # print(posComb)
+        newPosComb = []
+        newPosList.append(dictPos[posComb][trend])
+    newPosList.append(dictPos['шр'][trend])
+    newPosList.sort(reverse=True)
+    # newPosList.append(newPosComb)
+    return newPosList
+
+def codPosit(lstPos, dictPos, trend):
+    newPosList = []
+    for posComb in sorted(lstPos):
+        for k, v in dictPos.items():
+            if v[trend] == posComb:
+                newPosList.append(k)
+    return newPosList
+
+
+def calcOneComb(positionsLst, inTrend):
+    
+    returnList = []
+    for combPosL in positionsLst:
+        # print(combPosL)
+        combPos = decodPosit(combPosL, dictCurrentPos, inTrend)
+        nKA = len(combPos)
+
+        if nKA > 1:
+            # кортеж, содержащий независмые позиции, исключая последнюю позицию (для расчета для 1 и новой позиций)
+            tplIndPosWithoutLast = searchIndepPos(combPos[:-1], matrixGraph)
+            # список, содержащий кол-во защищаемых линий, исключая для последней позиции
+            lstProtLinesWithoutLast = calculProtLines(combPos[:-1], matrixGraph, dictProtectLines)
+        else:
+            tplIndPosWithoutLast = ()
+            lstProtLinesWithoutLast = []
+
+        # ЦИКЛ ФОРМИРОВАНИЯ КОМБИНАЦИЙ И ИХ ПРОСЧЕТА
+        lastPosit = combPos[-1] # последняя в списке позиция
+
+        # ФОрмирование списка независимых позиций и списка с кол-вом защищаемых линий для каждой позиции
+        lstIndPos = []
+        lstProtLines = lstProtLinesWithoutLast.copy()
+        lastProtLines = dictProtectLines[lastPosit]
+        for indPos in tplIndPosWithoutLast:
+            if matrixGraph[lastPosit-1][indPos-1] == 0:
+                lstIndPos.append(indPos)
+            else:
+                lastProtLines -= dictProtectLines[indPos]
+        lstIndPos.append(lastPosit)
+        lstProtLines.append(lastProtLines)
+
+        # Рассчет кол-ва защишаемых линий позицией 1
+        oneProtLines = dictProtectLines[1]
+        for indPos in lstIndPos:
+            oneProtLines -= dictProtectLines[indPos]
+
+        # Рассчет мат ожидания
+        me = 0
+        for nPos in range(nKA):
+            me += lstProtLines[nPos] * arrayProtectPower[combPos[nPos] - 1]
+        me = (me + oneProtLines * arrayProtectPower[0]) / AMOUNT_LINES
+
+        # print(combPos)
+        print(round(me,1), nKA, codPosit(combPos, dictCurrentPos, trend=curTrend))
+        returnList.append(codPosit(combPos, dictCurrentPos, trend=curTrend))
+    # print(returnList)
+    return returnList
+
 
 
 def calculationLastNka(kaLast, amountKA = AMOUNT_LINES-1):
@@ -359,6 +462,7 @@ def calculationLastNka(kaLast, amountKA = AMOUNT_LINES-1):
     return returnCalculData[1:]
 
 
+
 # Задание количества КА для проведения рассчетов
 #kaFirst, kaLast = map(int, input().split())
 print("Введите количесвто КА,")
@@ -367,5 +471,10 @@ kaFirstFinish = int(input("которым закончить: "))
 
 kaLast = int(input("\nВведите число значений количесвта КА, рассчитываемых в конце: "))
 
-calculationFrom1ToNka(kaFirstStart, kaFirstFinish)
-calculationLastNka(kaLast)
+
+# calculationFrom1ToNka(kaFirstStart, kaFirstFinish)
+# calculationLastNka(kaLast)
+
+# calcOneComb(positionsLst=posList, inTrend=curTrend)
+writeListInXlsx('Кашино_ППЗ', calcOneComb(positionsLst=posList, inTrend=curTrend))
+#writeGrMatrInXlsx('ППЗ_Кашино', calcOneComb(positionsLst=posList, inTrend=1))

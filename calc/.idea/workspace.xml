@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d6f72e7-ffb7-4b82-b6eb-8ae32ae9e722" name="Default Changelist" comment="" />
+    <list default="true" id="1d6f72e7-ffb7-4b82-b6eb-8ae32ae9e722" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/calc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calk.py" beforeDir="false" afterPath="$PROJECT_DIR$/calk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outData.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,18 +21,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/calk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="118" selection-start-line="118" selection-end-line="118" />
+            <state relative-caret-position="230">
+              <caret line="469" column="49" selection-start-line="469" selection-start-column="49" selection-end-line="469" selection-end-column="49" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#164#554#0" />
-                <element signature="e#705#1090#0" />
-                <element signature="e#1195#1356#0" />
-                <element signature="e#1477#1852#0" />
-                <element signature="e#1935#2130#0" />
-                <element signature="e#2209#2653#0" />
-                <element signature="e#2753#3483#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/writeMatr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -51,13 +61,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/calk.py" />
+        <option value="$PROJECT_DIR$/writeMatr.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
-    <option name="width" value="984" />
-    <option name="height" value="1032" />
+    <option name="y" value="288" />
+    <option name="width" value="1617" />
+    <option name="height" value="756" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -65,7 +77,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,10 +88,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,24 +148,32 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17871326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21286735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6719858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35106382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.6258865" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -170,20 +191,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        <state relative-caret-position="230">
+          <caret line="469" column="49" selection-start-line="469" selection-start-column="49" selection-end-line="469" selection-end-column="49" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#164#554#0" />
-            <element signature="e#705#1090#0" />
-            <element signature="e#1195#1356#0" />
-            <element signature="e#1477#1852#0" />
-            <element signature="e#1935#2130#0" />
-            <element signature="e#2209#2653#0" />
-            <element signature="e#2753#3483#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/writeMatr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

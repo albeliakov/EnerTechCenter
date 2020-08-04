@@ -40,14 +40,14 @@ def write2Excel(book, sheetName, cols, colNames, writeRows):
             row.write(index, value)
 
     # Save the result
-    book.save("C:/EnerTechCenter/Результаты/объедин_КашиноПтицеплемзавод.xls")
+    book.save("C:/EnerTechCenter/Результаты/объедин_БелоречкаГагарский.xls")
 
 # полученные результаты по сети 1
-gridResults_1 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Кашино.xlsx',
-                      'Лист1', ('A6', 'C16'))
+gridResults_1 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Белоречка.xlsx',
+                      'Лист1', ('A6', 'C13'))
 # полученные результаты по сети 2
-gridResults_2 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_ПтицепленЗавод.xlsx',
-                      'Лист1', ('A7', 'C16'))
+gridResults_2 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Гагарский.xlsx',
+                      'Лист1', ('A6', 'C14'))
 
 # gridResults_1 = {0: (500, ()), 1: (450, ('К_2',)), 2: (370, ('К_3', 'К_4')), 3: (300, ('К_2', 'К_4','К_5'))}
 # gridResults_2 = {0: (450, ()), 1: (450, ('П_3',)), 2: (320, ('П_3', 'П_5')), 3: (250, ('П_3', 'П_6','П_7'))}
@@ -77,10 +77,10 @@ for key, val in dictConsolidRes.items():
 # Рассчет для крайних (максимальных) значений КА
 # maxKAGrid_1 = {0: (500, ()), 1: (450, ()), 2: (370, ()), 3: (300, ())}
 # maxKAGrid_2 = {0: (450, ()), 1: (450, ()), 2: (320, ()), 3: (250, ())}
-maxKAGrid_1 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Кашино.xlsx',
+maxKAGrid_1 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Белоречка.xlsx',
                       'Лист1', ('A2', 'C5'), onLabel=False)
-maxKAGrid_2 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_ПтицепленЗавод.xlsx',
-                      'Лист1', ('A2', 'C6'), onLabel=False)
+maxKAGrid_2 = loadResFromXlsx('C:/EnerTechCenter/Результаты/выхДанные_Гагарский.xlsx',
+                      'Лист1', ('A2', 'C5'), onLabel=False)
 
 dictMaxKARes = {}
 for amKA_1 in maxKAGrid_1.keys():
